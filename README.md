@@ -34,7 +34,7 @@ go test
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](github.com/Obsinqsob01/golang-web-blog).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Obsinqsob01/golang-web-blog/issues).
 
 ## Show your support
 
