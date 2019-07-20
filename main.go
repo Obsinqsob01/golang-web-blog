@@ -2,32 +2,18 @@ package main
 
 import (
 	"fmt"
+	"golang-web/actions"
+	"golang-web/middlewares"
 	"log"
 	"net/http"
 	"os"
 	"time"
 )
 
-// Loggin create log for each request
-func Loggin(next http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		start := time.Now()
-		req := fmt.Sprintf("%s %s", r.Method, r.URL)
-		log.Println(req)
-		next.ServeHTTP(w, r)
-		log.Println(req, "completed in", time.Now().Sub(start))
-	})
-}
-
-// HomeHandler home route
-func HomeHandler() http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Hello World")
-	})
-}
-
 func main() {
 	mux := http.NewServeMux()
+
+	mux.Handle("/", middlewares.Loggin(actions.HomeHandler()))
 
 	port, err := os.LookupEnv("PORT")
 	if !err {
