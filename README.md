@@ -30,7 +30,7 @@ go test
 👤 **Luis Contreras Guerra**
 
 - Twitter: [@ellcontreras](https://twitter.com/ellcontreras)
-- Github: [@Obsinqsob01](https://github.com/Obsinqsob01)
+- GitHub: [@Obsinqsob01](https://github.com/Obsinqsob01)
 
 ## 🤝 Contributing
 
